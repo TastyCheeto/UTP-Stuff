@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_alignParentLeft="true"
+        android:id="@+id/imvFoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_launcher_background"
+        ></ImageView>
+
+    <TextView
+        android:layout_toRightOf="@id/imvFoto"
+        android:id="@+id/txtnombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        android:text="juan Zamora"
+        ></TextView>
+
+    <TextView
+        android:layout_toRightOf="@+id/imvFoto"
+        android:layout_below="@+id/txtnombre"
+        android:id="@+id/txtchat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="hay reunion ahora"
+        ></TextView>
+
+    <TextView
+        android:id="@+id/txthora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/txtnombre"
+        android:layout_alignParentLeft="true"
+        android:text="4:15pm"
+        android:textSize="16dp"></TextView>
+
+    <TextView
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/txthora"
+        android:layout_toRightOf="@id/txtchat"
+        android:id="@+id/txtchatcount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#345462"
+        android:textSize="16dp"
+        android:text="5pm"
+        ></TextView>
+
+</RelativeLayout>
