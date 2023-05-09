@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ProgressBarActivity</string>
+    <string name="value1">Input the value you want to see on the progress bar</string>
+    <string name="this_may_take_a_while">This may take a while...</string>
+</resources>
