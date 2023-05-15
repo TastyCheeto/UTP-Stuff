@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
@@ -12,21 +16,22 @@
         android:id="@+id/linearLayoutCompat"
         android:layout_width="280dp"
         android:layout_height="250dp"
+        android:layout_marginTop="52dp"
         android:background="@drawable/card_bg"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="42dp">
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
 
         <TextView
             android:layout_width="250dp"
             android:layout_height="40dp"
             android:text="@string/value1"
-            android:textStyle="bold"
+            android:textAlignment="center"
             android:textSize="14sp"
-            android:textAlignment="center"/>
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/number_input"
@@ -34,42 +39,124 @@
             android:layout_height="wrap_content"
             android:hint="value between 0 an 100"
             android:inputType="number"
-            android:textSize="13sp"
             android:textAlignment="center"
-            />
+            android:textSize="13sp" />
 
         <ProgressBar
             android:id="@+id/progressBar"
             style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="220dp"
             android:layout_height="20dp"
+            android:layout_marginTop="20dp"
             android:indeterminate="false"
             android:max="100"
             android:minWidth="200dp"
             android:minHeight="50dp"
-            android:progress="0"
-            android:layout_marginTop="20dp"
-            />
+            android:progress="0" />
+
         <TextView
             android:layout_width="140dp"
             android:layout_height="20dp"
             android:text="@string/this_may_take_a_while"
             android:textColor="#868282"
-            android:textSize="12sp"
-            />
+            android:textSize="12sp" />
 
         <Button
             android:id="@+id/submit_button"
             android:layout_width="150dp"
             android:layout_height="45dp"
+            android:layout_marginTop="20dp"
             android:text="Try it out!"
             android:textSize="14sp"
-            android:textStyle="bold"
-            android:layout_marginTop="20dp"
-            />
+            android:textStyle="bold" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayoutCompat2"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat"
+        android:layout_width="280dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/card_bg"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <DatePicker
+            android:id="@+id/datePiker1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:calendarViewShown="false"
+            android:datePickerMode="spinner" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <Button
+        android:id="@+id/showdate"
+        android:layout_width="150dp"
+        android:layout_height="45dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat2"
+        android:layout_marginTop="10dp"
+        android:text="Show Date"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tvdate"
+        android:layout_width="220dp"
+        android:layout_height="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/showdate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="#868282"
+        android:textSize="12sp"
+        android:textAlignment="center" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayoutCompat3"
+        android:layout_width="280dp"
+        android:layout_height="250dp"
+        android:background="@drawable/card_bg"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvdate"
+        tools:ignore="MissingConstraints">
+
+        <TimePicker
+            android:id="@+id/timePiker1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:timePickerMode="spinner"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <Button
+        android:id="@+id/btn_showtime"
+        android:layout_width="150dp"
+        android:layout_height="45dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat3"
+        android:layout_marginTop="10dp"
+        android:text="Show time"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textview_time"
+        android:layout_width="220dp"
+        android:layout_height="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/btn_showtime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="#868282"
+        android:textSize="12sp"
+        android:textAlignment="center" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
